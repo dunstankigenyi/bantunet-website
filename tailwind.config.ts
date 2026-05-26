@@ -21,7 +21,13 @@ const config: Config = {
       },
       boxShadow: {
         glow: "0 24px 80px rgba(34, 197, 94, 0.22)",
-        soft: "0 24px 70px rgba(15, 23, 42, 0.12)"
+        "glow-sm": "0 10px 30px rgba(34, 197, 94, 0.20)",
+        soft: "0 24px 70px rgba(15, 23, 42, 0.12)",
+        card: "0 18px 45px rgba(15, 23, 42, 0.08)"
+      },
+      backgroundImage: {
+        "hero-mesh":
+          "linear-gradient(135deg, rgba(34, 197, 94, 0.14), transparent 34%), linear-gradient(315deg, rgba(56, 189, 248, 0.10), transparent 38%)"
       }
     }
   },

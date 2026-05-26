@@ -3,7 +3,34 @@ export const siteContent = {
     name: "BantuNet",
     url: "https://www.bantunet.org",
     domain: "www.bantunet.org",
-    locale: "en_US"
+    locale: "en_US",
+    author: "BantuNet",
+    twitterSite: "@bantunet",
+    ogImage: {
+      path: "/bantunet-map-visual.svg",
+      width: 1200,
+      height: 900,
+      alt: "BantuNet decentralized Wi-Fi network map"
+    },
+    keywords: [
+      "BantuNet",
+      "Wi-Fi sharing",
+      "internet packages",
+      "verified hosts",
+      "community Wi-Fi",
+      "affordable internet",
+      "mobile wallet",
+      "hotspot hosting",
+      "mobile money",
+      "host payouts",
+      "African technology",
+      "Uganda Wi-Fi",
+      "Kenya Wi-Fi",
+      "Rwanda Wi-Fi",
+      "Tanzania Wi-Fi",
+      "Nigeria Wi-Fi",
+      "Ghana Wi-Fi"
+    ]
   },
   nav: {
     skipLink: "Skip to content",
@@ -12,14 +39,16 @@ export const siteContent = {
     menuLabel: "Open navigation",
     closeLabel: "Close navigation",
     links: [
-      { label: "Home", href: "/" },
-      { label: "About", href: "/about" },
-      { label: "How It Works", href: "/how-it-works" },
-      { label: "Hosts", href: "/hosts" },
-      { label: "Support", href: "/support" },
-      { label: "Privacy Policy", href: "/privacy" }
+      { label: "Home", href: "/", desktop: true },
+      { label: "About", href: "/about", desktop: true },
+      { label: "How It Works", href: "/how-it-works", desktop: true },
+      { label: "Hosts", href: "/hosts", desktop: true },
+      { label: "Support", href: "/support", desktop: true },
+      { label: "Privacy Policy", href: "/privacy", desktop: false }
     ],
-    cta: { label: "Get Started", href: "/support" }
+    cta: { label: "Find Hotspots", href: "/support" },
+    hostCta: { label: "Become a Host", href: "/hosts" },
+    downloadCta: { label: "Download App", href: "/support" }
   },
   faq: [
     {
@@ -55,24 +84,37 @@ export const siteContent = {
   ],
   home: {
     seo: {
-      title: "BantuNet | Connect Anywhere",
+      title: "BantuNet | African-First Wi-Fi Sharing",
       description:
-        "Buy Wi-Fi packages from nearby verified hosts with BantuNet, a community-based internet sharing platform built for affordable access.",
+        "BantuNet is an African-first Wi-Fi sharing platform for nearby hotspot discovery, mobile money payments, wallet records, and host payouts.",
       path: "/"
     },
     hero: {
-      eyebrow: "Community Wi-Fi sharing",
+      eyebrow: "African-first connectivity platform",
       title: "BantuNet",
-      headline: "Connect Anywhere.",
+      headline: "Community Wi-Fi. Mobile money. Local access.",
       subheadline:
-        "Buy Wi-Fi packages from nearby verified hosts and stay connected wherever you go.",
-      primaryButton: { label: "Get Started", href: "/support" },
+        "Find nearby verified hotspots, buy affordable internet packages, and help local hosts earn from their connection.",
+      primaryButton: { label: "Find Hotspots", href: "/support" },
       secondaryButton: { label: "Become a Host", href: "/hosts" },
+      tertiaryButton: { label: "Download App", href: "/support" },
+      stats: [
+        { value: "6", label: "Target launch countries" },
+        { value: "MM", label: "Mobile money payments" },
+        { value: "Payouts", label: "Host earning wallet" }
+      ],
+      trustPoints: [
+        "Verified hotspots",
+        "Wallet-backed purchases",
+        "Mobile money ready",
+        "Host payout records"
+      ],
       visual: {
         alt: "Map-inspired Wi-Fi network visual for BantuNet",
         panelLabel: "Nearby verified hosts",
         locationLabel: "Live area scan",
         hostsLabel: "Verified hosts nearby",
+        hostCount: "+14",
         packageLabel: "Popular package",
         walletLabel: "Wallet ready",
         trustLabel: "Verified access",
@@ -82,36 +124,36 @@ export const siteContent = {
       }
     },
     what: {
-      eyebrow: "What BantuNet does",
-      title: "A simpler way to get online near you.",
+      eyebrow: "Platform",
+      title: "Decentralized internet access, made practical.",
       body:
-        "BantuNet connects people who need internet access with verified local hosts who can safely share approved Wi-Fi packages.",
+        "BantuNet turns nearby verified hotspots into a trusted marketplace for access, payments, wallet records, and host earnings.",
       cards: [
         {
           icon: "wifi",
-          title: "Buy nearby Wi-Fi",
+          title: "Find local hotspots",
           body:
-            "Discover available hotspots around you and choose a package that fits your time, budget, and data needs."
+            "Open the app to discover verified Wi-Fi hosts near your current location."
         },
         {
-          icon: "mapPin",
-          title: "Use location intelligently",
+          icon: "creditCard",
+          title: "Pay with confidence",
           body:
-            "Location helps the app show nearby hosts and makes the connection flow easier when you are ready to get online."
+            "Buy clear internet packages through supported payment and wallet flows."
         },
         {
-          icon: "shieldCheck",
-          title: "Trust verified hosts",
+          icon: "handCoins",
+          title: "Reward local hosts",
           body:
-            "Host verification, safety rules, and approved packages help make neighborhood internet sharing more reliable."
+            "Hosts can monetize approved internet access and track eligible payout activity."
         }
       ]
     },
     howItWorksPreview: {
       eyebrow: "How it works",
-      title: "From nearby search to connected in a few clear steps.",
+      title: "Find, pay, connect.",
       body:
-        "The customer journey is designed to feel familiar: open the app, choose a nearby host, pay securely, and connect.",
+        "The user flow is intentionally simple: discover nearby hotspots, choose a package, pay securely, and connect.",
       steps: [
         { title: "Open the app", body: "Start BantuNet when you need internet access." },
         { title: "Find a host", body: "Use location to view verified hotspots nearby." },
@@ -122,7 +164,7 @@ export const siteContent = {
     },
     userBenefits: {
       eyebrow: "Benefits for users",
-      title: "Affordable access without hunting for passwords.",
+      title: "Affordable Wi-Fi without password chasing.",
       cards: [
         {
           icon: "smartphone",
@@ -144,9 +186,32 @@ export const siteContent = {
         }
       ]
     },
+    packageModel: {
+      eyebrow: "Packages and payouts",
+      title: "Simple packages. Clear wallet records. Faster host payouts.",
+      body:
+        "BantuNet keeps the commercial layer understandable for users and hosts: package selection, secure payment, access records, and payout history.",
+      cards: [
+        {
+          icon: "fileText",
+          title: "Standard packages",
+          body: "Users see approved package options before they pay."
+        },
+        {
+          icon: "creditCard",
+          title: "Mobile money payments",
+          body: "Payments and wallet records support purchases, support, and reconciliation."
+        },
+        {
+          icon: "banknote",
+          title: "Host payouts",
+          body: "Eligible host earnings can be tracked against approved hotspot activity."
+        }
+      ]
+    },
     hostBenefits: {
       eyebrow: "Benefits for hosts",
-      title: "Turn an approved hotspot into community value.",
+      title: "Monetize your internet with a trusted host flow.",
       cards: [
         {
           icon: "handCoins",
@@ -167,33 +232,39 @@ export const siteContent = {
             "Host tools are designed around setup, package approval, safety rules, and payout visibility."
         }
       ],
-      link: { label: "Explore hosting", href: "/hosts" }
+      link: { label: "Explore hosting", href: "/hosts" },
+      conversion: {
+        title: "Ready to earn from your connection?",
+        body: "BantuNet gives verified hosts a structured way to offer Wi-Fi packages and track payout activity.",
+        button: { label: "Become a Host", href: "/hosts" }
+      }
     },
     countries: {
-      eyebrow: "Supported countries",
-      title: "Built for communities where access matters.",
+      eyebrow: "Coverage",
+      title: "Built for African markets where access matters.",
       body:
-        "BantuNet can support markets where neighborhood connectivity, mobile payments, and verified local hosts can help reduce barriers to internet access.",
-      countries: ["Nigeria", "Ghana", "Kenya", "Uganda", "Tanzania", "Rwanda", "South Africa", "Zambia"],
+        "BantuNet is designed around mobile-first connectivity, local hosting, and payment behavior across high-growth African markets.",
+      countries: ["Uganda", "Kenya", "Rwanda", "Tanzania", "Nigeria", "Ghana"],
       note:
-        "Country availability may launch in phases based on payment coverage, host readiness, and local compliance needs."
+        "Availability can launch in phases based on payment coverage, host readiness, and local compliance."
     },
     payments: {
-      eyebrow: "Payments and wallet",
-      title: "Secure payments with clear wallet records.",
+      eyebrow: "Wallet",
+      title: "Fintech-enabled infrastructure for Wi-Fi access.",
+      panelLabel: "Wallet flow",
       body:
-        "Customers can pay for packages through supported payment services, while BantuNet keeps wallet and purchase history records so access, refunds, support, and host payouts can be handled responsibly.",
+        "BantuNet connects access with wallet records so users, hosts, and support teams can understand purchases, balances, adjustments, and payouts.",
       points: [
-        "Package purchases are tied to the customer account.",
-        "Wallet records help track usage, balances, adjustments, and support issues.",
-        "Host payout flows are designed to match approved package activity."
+        "Users buy internet packages from verified nearby hosts.",
+        "Wallet records help track purchases, balances, adjustments, and support cases.",
+        "Host payout flows match eligible approved package activity."
       ]
     },
     safety: {
       eyebrow: "Safety and verification",
-      title: "A platform designed around trust.",
+      title: "Trust is built into the network.",
       body:
-        "BantuNet uses host review, hotspot information, location context, package controls, and support processes to make Wi-Fi sharing more professional for both customers and hosts.",
+        "Host verification, hotspot review, wallet records, and support processes help make community-powered Wi-Fi more accountable.",
       cards: [
         {
           icon: "userCheck",
@@ -216,11 +287,28 @@ export const siteContent = {
       ]
     },
     cta: {
-      title: "Ready to connect or host?",
+      badge: "Mobile-first platform",
+      title: "Start with BantuNet.",
       body:
-        "BantuNet brings nearby internet access, verified hosts, and secure package purchases into one simple platform.",
-      primaryButton: { label: "Get Started", href: "/support" },
+        "Find nearby hotspots, become a verified host, or get help preparing for BantuNet in your market.",
+      primaryButton: { label: "Find Hotspots", href: "/support" },
       secondaryButton: { label: "Become a Host", href: "/hosts" }
+    },
+    download: {
+      eyebrow: "Download",
+      title: "Your hotspot marketplace, built for the phone.",
+      body:
+        "The BantuNet app is designed for location-based discovery, package purchase, wallet records, and host onboarding.",
+      primaryButton: { label: "Download App", href: "/support" },
+      secondaryButton: { label: "Learn How It Works", href: "/how-it-works" },
+      visualLabel: "BantuNet app flow",
+      statusLabel: "Mobile-first",
+      checklist: [
+        "Find nearby verified hotspots",
+        "Choose a package",
+        "Pay securely",
+        "Track wallet activity"
+      ]
     },
     faqPreview: {
       eyebrow: "FAQ",
@@ -427,6 +515,7 @@ export const siteContent = {
       }
     ],
     packages: {
+      eyebrow: "Hosting packages",
       title: "Package principles",
       points: [
         "Packages should be easy for customers to understand before payment.",
@@ -683,6 +772,14 @@ export const siteContent = {
     tagline: "Connect. Access. Anywhere.",
     email: "support@bantunet.org",
     emailLabel: "support@bantunet.org",
+    cta: {
+      title: "Find Wi-Fi or become a host.",
+      body: "BantuNet brings hotspot discovery, mobile money, wallets, and host payouts into one African-first platform.",
+      primaryButton: { label: "Find Hotspots", href: "/support" },
+      secondaryButton: { label: "Become a Host", href: "/hosts" }
+    },
+    countriesTitle: "Target regions",
+    countries: ["Uganda", "Kenya", "Rwanda", "Tanzania", "Nigeria", "Ghana"],
     linksTitle: "Website",
     legalTitle: "Legal",
     privacyLabel: "Privacy Policy",

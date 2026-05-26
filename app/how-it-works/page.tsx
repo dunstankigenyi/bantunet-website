@@ -15,18 +15,18 @@ export default function HowItWorksPage() {
   return (
     <>
       <PageHero {...howItWorks.hero} />
-      <section className="py-16 sm:py-20">
+      <section className="py-20 sm:py-24">
         <Container>
           <SectionHeading eyebrow={howItWorks.userFlow.eyebrow} title={howItWorks.userFlow.title} />
-          <div className="mt-10">
+          <div className="mt-12">
             <ProcessList steps={howItWorks.userFlow.steps} />
           </div>
         </Container>
       </section>
-      <section className="bg-white py-16 sm:py-20">
+      <section className="bg-white py-20 sm:py-24">
         <Container>
           <SectionHeading eyebrow={howItWorks.hostFlow.eyebrow} title={howItWorks.hostFlow.title} />
-          <div className="mt-10">
+          <div className="mt-12">
             <ProcessList steps={howItWorks.hostFlow.steps} />
           </div>
         </Container>
