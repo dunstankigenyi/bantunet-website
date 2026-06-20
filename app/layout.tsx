@@ -28,7 +28,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body>
-        <SiteHeader nav={siteContent.nav} />
+        <SiteHeader appIcon={siteContent.site.appIcon} nav={siteContent.nav} />
         <main id="main-content">{children}</main>
         <SiteFooter footer={siteContent.footer} nav={siteContent.nav} />
       </body>

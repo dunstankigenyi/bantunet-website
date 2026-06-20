@@ -12,6 +12,12 @@ export const siteContent = {
       height: 900,
       alt: "BantuNet decentralized Wi-Fi network map"
     },
+    appIcon: {
+      path: "/app-icon.png",
+      width: 1024,
+      height: 1024,
+      alt: "BantuNet app icon"
+    },
     keywords: [
       "BantuNet",
       "Wi-Fi sharing",

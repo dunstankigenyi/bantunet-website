@@ -1,17 +1,19 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, Wifi, X } from "lucide-react";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import type { SiteContent } from "@/content/siteContent";
 import { Container } from "@/components/Container";
 
 type SiteHeaderProps = {
+  appIcon: SiteContent["site"]["appIcon"];
   nav: SiteContent["nav"];
 };
 
-export function SiteHeader({ nav }: SiteHeaderProps) {
+export function SiteHeader({ appIcon, nav }: SiteHeaderProps) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
@@ -44,8 +46,15 @@ export function SiteHeader({ nav }: SiteHeaderProps) {
       <Container>
         <div className="flex h-16 items-center justify-between gap-4 sm:h-20">
           <Link href="/" aria-label={nav.logoLabel} className="group flex items-center gap-2.5">
-            <span className="grid h-9 w-9 place-items-center rounded-lg bg-bantunet-green text-bantunet-navy transition duration-200 group-hover:scale-105">
-              <Wifi className="h-4 w-4" aria-hidden="true" />
+            <span className="relative h-9 w-9 overflow-hidden rounded-lg ring-1 ring-white/10 transition duration-200 group-hover:scale-105">
+              <Image
+                src={appIcon.path}
+                alt=""
+                fill
+                sizes="36px"
+                className="object-cover"
+                priority
+              />
             </span>
             <span className="text-base font-bold text-white">{nav.brand}</span>
           </Link>

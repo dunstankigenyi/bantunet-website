@@ -46,7 +46,8 @@ export function createMetadata(seo: PageSeo): Metadata {
       images: [image]
     },
     icons: {
-      icon: "/favicon.svg"
+      icon: siteContent.site.appIcon.path,
+      apple: siteContent.site.appIcon.path
     }
   };
 }
