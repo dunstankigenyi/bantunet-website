@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, Mail } from "lucide-react";
+import { AppDownload } from "@/components/AppDownload";
 import type { SiteContent } from "@/content/siteContent";
 import { Container } from "@/components/Container";
 
@@ -46,6 +47,9 @@ export function SiteFooter({ footer, nav }: SiteFooterProps) {
               <Mail className="h-4 w-4" aria-hidden="true" />
               {footer.emailLabel}
             </a>
+            <div className="mt-6">
+              <AppDownload variant="inline" />
+            </div>
           </div>
           <div>
             <p className="text-sm font-semibold uppercase text-slate-400">{footer.linksTitle}</p>

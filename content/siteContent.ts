@@ -48,7 +48,7 @@ export const siteContent = {
     ],
     cta: { label: "Find Hotspots", href: "/support" },
     hostCta: { label: "Become a Host", href: "/hosts" },
-    downloadCta: { label: "Download App", href: "/support" }
+    downloadCta: { label: "Download App", href: "/download" }
   },
   faq: [
     {
@@ -97,7 +97,7 @@ export const siteContent = {
         "Find nearby verified hotspots, buy affordable internet packages, and help local hosts earn from their connection.",
       primaryButton: { label: "Find Hotspots", href: "/support" },
       secondaryButton: { label: "Become a Host", href: "/hosts" },
-      tertiaryButton: { label: "Download App", href: "/support" },
+      tertiaryButton: { label: "Download App", href: "/download" },
       stats: [
         { value: "6", label: "Target launch countries" },
         { value: "MM", label: "Mobile money payments" },
@@ -299,7 +299,7 @@ export const siteContent = {
       title: "Your hotspot marketplace, built for the phone.",
       body:
         "The BantuNet app is designed for location-based discovery, package purchase, wallet records, and host onboarding.",
-      primaryButton: { label: "Download App", href: "/support" },
+      primaryButton: { label: "Download App", href: "/download" },
       secondaryButton: { label: "Learn How It Works", href: "/how-it-works" },
       visualLabel: "BantuNet app flow",
       statusLabel: "Mobile-first",
@@ -598,6 +598,59 @@ export const siteContent = {
     faq: {
       eyebrow: "FAQ",
       title: "Frequently asked questions"
+    }
+  },
+  download: {
+    seo: {
+      title: "Download BantuNet | Wi-Fi Sharing App for Africa",
+      description:
+        "Download BantuNet for Android or iPhone to find nearby verified Wi-Fi hotspots, buy internet packages, and manage wallet-backed access.",
+      path: "/download"
+    },
+    iosSeo: {
+      title: "Download BantuNet for iPhone | BantuNet",
+      description:
+        "Get BantuNet on the App Store to find nearby verified Wi-Fi hotspots, buy internet packages, and manage connectivity from your iPhone.",
+      path: "/download/ios"
+    },
+    hero: {
+      eyebrow: "Download BantuNet",
+      title: "Get connected from your phone.",
+      body:
+        "Use BantuNet to discover nearby verified hotspots, buy approved internet packages, and manage access wherever the network is available."
+    },
+    app: {
+      heading: "Download BantuNet",
+      subheading: "Available for Android and iPhone.",
+      androidLabel: "Get it on Google Play",
+      androidPrefix: "Get it on",
+      androidName: "Google Play",
+      iosLabel: "Download on the App Store",
+      iosPrefix: "Download on the",
+      iosName: "App Store"
+    },
+    features: {
+      eyebrow: "In the app",
+      title: "Built for everyday connectivity.",
+      body:
+        "BantuNet keeps hotspot discovery, package purchase, wallet records, and host onboarding in one mobile-first flow.",
+      cards: [
+        {
+          icon: "wifi",
+          title: "Find nearby Wi-Fi",
+          body: "Use location to see verified hotspots and available package options near you."
+        },
+        {
+          icon: "creditCard",
+          title: "Buy clear packages",
+          body: "Choose approved internet packages and keep purchase records tied to your wallet."
+        },
+        {
+          icon: "radioTower",
+          title: "Host from your phone",
+          body: "Submit hotspot details, manage host setup, and track eligible payout activity."
+        }
+      ]
     }
   },
   privacy: {

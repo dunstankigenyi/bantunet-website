@@ -8,6 +8,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     siteContent.about.seo.path,
     siteContent.howItWorks.seo.path,
     siteContent.hosts.seo.path,
+    siteContent.download.seo.path,
+    siteContent.download.iosSeo.path,
     siteContent.support.seo.path,
     siteContent.privacy.seo.path,
     siteContent.deleteAccount.seo.path
