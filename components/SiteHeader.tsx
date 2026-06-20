@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { Download, Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import type { SiteContent } from "@/content/siteContent";
@@ -79,8 +79,9 @@ export function SiteHeader({ appIcon, nav }: SiteHeaderProps) {
           <div className="hidden items-center gap-3 lg:flex">
             <Link
               href={nav.downloadCta.href}
-              className="rounded-lg px-4 py-2 text-sm font-semibold text-slate-200 transition hover:bg-white/10 hover:text-white"
+              className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-4 py-2 text-sm font-semibold text-white transition hover:border-bantunet-green/50 hover:bg-white/10 hover:text-bantunet-mint"
             >
+              <Download className="h-4 w-4" aria-hidden="true" />
               {nav.downloadCta.label}
             </Link>
             <Link
@@ -130,8 +131,9 @@ export function SiteHeader({ appIcon, nav }: SiteHeaderProps) {
                 <Link
                   href={nav.downloadCta.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-lg border border-white/20 px-4 py-2.5 text-center text-sm font-semibold text-white"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/20 px-4 py-2.5 text-center text-sm font-semibold text-white"
                 >
+                  <Download className="h-4 w-4" aria-hidden="true" />
                   {nav.downloadCta.label}
                 </Link>
                 <Link

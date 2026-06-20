@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { ArrowRight, CheckCircle2, Download, Globe2, Smartphone, TrendingUp } from "lucide-react";
+import { AppDownload } from "@/components/AppDownload";
 import { Container } from "@/components/Container";
 import { CtaSection } from "@/components/CtaSection";
 import { FaqList } from "@/components/FaqList";
@@ -223,14 +224,10 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Link
-                  href={home.download.primaryButton.href}
-                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-bantunet-green px-6 py-3.5 text-sm font-bold text-bantunet-navy shadow-glow-sm transition hover:bg-bantunet-mint"
-                >
-                  <Download className="h-4 w-4" aria-hidden="true" />
-                  {home.download.primaryButton.label}
-                </Link>
+              <div className="mt-8 max-w-xl">
+                <AppDownload variant="inline" />
+              </div>
+              <div className="mt-4 flex flex-col gap-3 sm:flex-row">
                 <Link
                   href={home.download.secondaryButton.href}
                   className="inline-flex items-center justify-center rounded-lg border border-slate-200 px-6 py-3.5 text-sm font-bold text-bantunet-blue transition hover:border-bantunet-green hover:text-bantunet-green"

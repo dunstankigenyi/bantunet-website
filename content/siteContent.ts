@@ -103,7 +103,7 @@ export const siteContent = {
         "Find nearby verified hotspots, buy affordable internet packages, and help local hosts earn from their connection.",
       primaryButton: { label: "Find Hotspots", href: "/support" },
       secondaryButton: { label: "Become a Host", href: "/hosts" },
-      tertiaryButton: { label: "Download App", href: "/download/android" },
+      tertiaryButton: { label: "Download App", href: "/download" },
       stats: [
         { value: "6", label: "Target launch countries" },
         { value: "MM", label: "Mobile money payments" },
@@ -305,7 +305,7 @@ export const siteContent = {
       title: "Your hotspot marketplace, built for the phone.",
       body:
         "The BantuNet app is designed for location-based discovery, package purchase, wallet records, and host onboarding.",
-      primaryButton: { label: "Download App", href: "/download/android" },
+      primaryButton: { label: "Download App", href: "/download" },
       secondaryButton: { label: "Learn How It Works", href: "/how-it-works" },
       visualLabel: "BantuNet app flow",
       statusLabel: "Mobile-first",
@@ -634,6 +634,8 @@ export const siteContent = {
     app: {
       heading: "Download BantuNet",
       subheading: "Available for Android and iPhone.",
+      choiceLabel: "Choose your app store",
+      choiceBody: "Install BantuNet from the official store for your phone.",
       androidLabel: "Get it on Google Play",
       androidPrefix: "Get it on",
       androidName: "Google Play",

@@ -16,6 +16,8 @@ export default function DownloadPage() {
     <>
       <PageHero {...download.hero} />
 
+      <AppDownload heading={download.app.heading} subheading={download.app.subheading} />
+
       <section className="bg-white py-20 sm:py-24">
         <Container>
           <div className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
@@ -32,8 +34,6 @@ export default function DownloadPage() {
           </div>
         </Container>
       </section>
-
-      <AppDownload heading={download.app.heading} subheading={download.app.subheading} />
     </>
   );
 }
